@@ -13,19 +13,14 @@ def calcular():
         if I <= 0 or a <= 0:
             raise ValueError
 
-        # Distância do centro até cada fio
         r = a / math.sqrt(2)
 
-        # Campo produzido por um fio
         Bfio = MU0 * I / (2 * math.pi * r)
 
-        # Cada fio contribui com componente igual
         componente = Bfio / math.sqrt(2)
 
-        # As componentes em x se cancelam
         Bx = 0
 
-        # As componentes em y se somam
         By = 4 * componente
 
         B = math.sqrt(Bx**2 + By**2)
